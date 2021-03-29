@@ -4,9 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 @Injectable()
 export class UniqueIdService {
   private _numberOfGeneratedIds = 0;
+  private validId = /^[A-Za-z]+[\W\-\:\.]*$/;
 
-  generateUniqueIdWithPrefix(prefix: string): string {
-    if (!prefix) {
+  public generateUniqueIdWithPrefix(prefix: string): string {
+    if (!prefix || !this.validId.test(prefix)) {
       throw Error('Prefix can not be empty');
     }
 
@@ -15,7 +16,7 @@ export class UniqueIdService {
     return `${prefix}-${uniqueId}`;
   }
 
-  getNumberOfGeneratedIds(): number {
+  public getNumberOfGeneratedIds(): number {
     return this._numberOfGeneratedIds;
   }
 
