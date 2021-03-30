@@ -30,9 +30,9 @@ describe(UniqueIdService.name, () => {
     });
   });
 
-  it(`#${UniqueIdService.prototype.getNumberOfGeneratedIds.name} should return the number of generatedIds when called`, () => {
+  it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name} should return the number of generatedIds when called`, () => {
     service.generateUniqueIdWithPrefix('app');
     service.generateUniqueIdWithPrefix('app');
-    expect(service.getNumberOfGeneratedIds()).toBe(2);
+    expect(service.getNumberOfGeneratedUniqueIds()).toBe(2);
   });
 });
