@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LikeWidgetComponent } from './like-widget.component';
 import { LikeWidgetModule } from './like-widget.module';
 
@@ -32,17 +31,11 @@ describe(LikeWidgetComponent.name, () => {
     expect(component.id).toBe(someId);
   });
 
-  it(`#${LikeWidgetComponent.prototype.like.name} should trigger (@Output liked) when called`, () => {
-    spyOn(component.liked, 'emit');
-    fixture.detectChanges();
-    component.like();
-    expect(component.liked.emit).toHaveBeenCalled();
-
-    // component.liked.subscribe(() => {
-    //   expect(true).toBeTrue();
-    //   done();
-    // });
-
-    // component.like();
+  it(`#${LikeWidgetComponent.prototype.like.name}
+    should trigger (@Output liked) when called`, () => {
+      spyOn(component.liked, 'emit');
+      fixture.detectChanges();
+      component.like();
+      expect(component.liked.emit).toHaveBeenCalled();
   });
 });

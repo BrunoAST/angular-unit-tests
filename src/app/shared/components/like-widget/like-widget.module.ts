@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
 import { UniqueIdService } from '../../services/uniqueid/unique-id.service';
 import { LikeWidgetComponent } from './like-widget.component';
 
@@ -11,7 +10,7 @@ import { LikeWidgetComponent } from './like-widget.component';
     CommonModule,
     FontAwesomeModule
   ],
-  providers: [UniqueIdService],
-  exports: [LikeWidgetComponent]
+  exports: [LikeWidgetComponent],
+  providers: [UniqueIdService]
 })
-export class LikeWidgetModule { }
+export class LikeWidgetModule {}

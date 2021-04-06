@@ -12,7 +12,7 @@ import { LikeWidgetModule } from './shared/components/like-widget/like-widget.mo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LikeWidgetModule,
+    LikeWidgetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
